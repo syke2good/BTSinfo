@@ -1,90 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scroll</title>
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header id="home">
-      <!-- navbar -->
-      <nav id="nav">
-        <div class="nav-center">
-          <!-- nav header -->
-          <div class="nav-header">
-            <img src="./logo.svg" class="logo" alt="logo" />
-            <button class="nav-toggle">
-              <i class="fas fa-bars"></i>
-            </button>
-          </div>
-          <!-- links -->
-          <div class="links-container">
-            <ul class="links">
-              <li>
-                <a href="#home" class="scroll-link">home</a>
-              </li>
-              <li>
-                <a href="#about" class="scroll-link">about</a>
-              </li>
-              <li>
-                <a href="#services" class="scroll-link">services</a>
-              </li>
-              <li>
-                <a href="#tours" class="scroll-link">tours</a>
-              </li>
-            </ul>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header id="home">
+    <!-- navbar -->
+    <nav id="nav">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./logo.svg" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-      </nav>
-      <!-- banner -->
-      <div class="banner">
-        <div class="container">
-          <h1>Our Dogs</h1>
-          <p>
-            This is a website about how crazy our dogs are.
-          </p>
-          <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
+        <!-- links -->
+        <div class="links-container">
+          <ul class="links">
+            <li>
+              <a href="#home" class="scroll-link">home</a>
+            </li>
+            <li>
+              <a href="#about" class="scroll-link">about</a>
+            </li>
+            <li>
+              <a href="#services" class="scroll-link">services</a>
+            </li>
+            <li>
+              <a href="#tours" class="scroll-link">tours</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Button to open the modal login form -->
+        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+        <!-- The Modal -->
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+
+          <!-- Modal Content -->
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <img src="./dog.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
         </div>
       </div>
-    </header>
-    <!-- about -->
-    <section id="about" class="section">
-      <div class="title">
-        <h2>about <span>us</span></h2>
-        <p1>The Golden is buddy and the husky is king.</p1>
+    </nav>
+    <!-- banner -->
+    <div class="banner">
+      <div class="container">
+        <h1>Our Dogs</h1>
+        <p>
+          This is a website about how crazy our dogs are.
+        </p>
+        <a href="#tours" class="scroll-link btn btn-white">explore tours</a>
       </div>
-    </section>
-    <!-- services -->
-    <section id="services" class="section">
-      <div class="title">
-        <h2>our <span>services</span></h2>
-        <p1>We Don't offer much services but we are very spoiled.</p1>
-      </div>
-    </section>
-    <!-- contact -->
-    <section id="tours" class="section">
-      <div class="title">
-        <h2>featured <span>tours</span></h2>
-      </div>
-    </section>
-    <!-- footer -->
-    <footer class="section">
-      <p>
-        copyright &copy; backroads travel tours company
-        <span id="date"></span>. all rights reserved
-      </p>
-    </footer>
-    <a class="scroll-link top-link" href="#home">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-    <!-- javascript -->
-    <script src="app.js"></script>
-  </body>
+    </div>
+  </header>
+  <!-- about -->
+  <section id="about" class="section">
+    <div class="title">
+      <h2>about <span>us</span></h2>
+      <p1>The Golden is buddy and the husky is king.</p1>
+    </div>
+  </section>
+  <!-- services -->
+  <section id="services" class="section">
+    <div class="title">
+      <h2>our <span>services</span></h2>
+      <p1>We Don't offer much services but we are very spoiled.</p1>
+    </div>
+  </section>
+  <!-- contact -->
+  <section id="tours" class="section">
+    <div class="title">
+      <h2>featured <span>tours</span></h2>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="section">
+    <p>
+      copyright &copy; backroads travel tours company
+      <span id="date"></span>. all rights reserved
+    </p>
+  </footer>
+  <a class="scroll-link top-link" href="#home">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <!-- javascript -->
+  <script src="app.js"></script>
+</body>
+
 </html>
